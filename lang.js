@@ -1,3 +1,15 @@
+// relógio da barra de tarefas falsa: hora e data do visitante
+(function () {
+  var t = document.getElementById('time'), d = document.getElementById('date');
+  if (!t) return;
+  function tick() {
+    var n = new Date();
+    t.textContent = n.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    d.textContent = n.toLocaleDateString();
+  }
+  tick(); setInterval(tick, 10000);
+})();
+
 // troca de idioma (EN / PT); lembra a escolha neste navegador
 document.getElementById('lang').addEventListener('click', function () {
   var pt = !document.documentElement.classList.contains('pt');

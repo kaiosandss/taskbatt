@@ -21,6 +21,7 @@
       <a class="hide-sm" href="#features"><span class="en">Features</span><span class="pt">Recursos</span></a>
       <a class="hide-sm" href="#themes"><span class="en">Styles</span><span class="pt">Visuais</span></a>
       <a class="hide-sm" href="#faq">FAQ</a>
+      <a href="privacy.html"><span class="en">Privacy</span><span class="pt">Privacidade</span></a>
       <button class="lang" id="lang" type="button"><span class="en">Português</span><span class="pt">English</span></button>
     </nav>
   </div>
@@ -46,8 +47,12 @@
 
     <div class="taskbar" aria-label="Taskbar preview">
       <div class="apps"><span></span><span></span><span></span><span></span></div>
-      <div class="batt" role="img" aria-label="Mouse 72%, keyboard 30%, headset 9%, controller charged"></div>
-      <div class="clock">20:14<br>20/11/2026</div>
+      <div class="batt" role="img" aria-label="Mouse 72%, keyboard 30%, headset 9%, controller charged">
+        <img src="img/bar-0@2x.png" srcset="img/bar-0@2x.png 1x, img/bar-0@3x.png 1.5x, img/bar-0@4x.png 2x" width="306" height="96" alt="">
+        <img src="img/bar-1@2x.png" srcset="img/bar-1@2x.png 1x, img/bar-1@3x.png 1.5x, img/bar-1@4x.png 2x" width="287" height="96" alt="">
+        <img src="img/bar-2@2x.png" srcset="img/bar-2@2x.png 1x, img/bar-2@3x.png 1.5x, img/bar-2@4x.png 2x" width="263" height="96" alt="">
+      </div>
+      <div class="clock" id="clock"><span id="time"></span><br><span id="date"></span></div>
     </div>
   </div>
 </section>
@@ -105,13 +110,13 @@
     <p class="sub en">Pixel-crisp icons for light and dark taskbars.</p>
     <p class="sub pt">Ícones nítidos, pixel a pixel, para barra clara e escura.</p>
     <div class="themes">
-      <div class="theme"><div class="strip" role="img" aria-label="Percentage style"></div>
+      <div class="theme"><div class="strip"><img src="img/bar-0@2x.png" srcset="img/bar-0@2x.png 1x, img/bar-0@3x.png 1.5x, img/bar-0@4x.png 2x" width="306" height="96" alt="Percentage style"></div>
         <h3 class="en">Percentage</h3><h3 class="pt">Porcentagem</h3>
         <p class="en">The number right next to the icon.</p><p class="pt">O número ao lado do desenho.</p></div>
-      <div class="theme"><div class="strip" role="img" aria-label="Battery bar style"></div>
+      <div class="theme"><div class="strip"><img src="img/bar-1@2x.png" srcset="img/bar-1@2x.png 1x, img/bar-1@3x.png 1.5x, img/bar-1@4x.png 2x" width="287" height="96" alt="Battery bar style"></div>
         <h3 class="en">Battery bar</h3><h3 class="pt">Barra de bateria</h3>
         <p class="en">A little battery that fills up.</p><p class="pt">Uma bateria que se enche.</p></div>
-      <div class="theme"><div class="strip" role="img" aria-label="Icon only style"></div>
+      <div class="theme"><div class="strip"><img src="img/bar-2@2x.png" srcset="img/bar-2@2x.png 1x, img/bar-2@3x.png 1.5x, img/bar-2@4x.png 2x" width="263" height="96" alt="Icon only style"></div>
         <h3 class="en">Icon only</h3><h3 class="pt">Só o desenho</h3>
         <p class="en">The device itself fills with charge.</p><p class="pt">O próprio desenho se enche.</p></div>
     </div>
