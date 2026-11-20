@@ -143,3 +143,28 @@ footer a:hover { color: var(--text); }
 .doc .tldr strong { color: var(--green); }
 .doc h2 { text-align: left; font-size: 22px; margin: 36px 0 8px; }
 .doc p, .doc li { color: #c9d1db; }
+
+/* menu oculto + notificação */
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 860px) { .duo { grid-template-columns: 1fr; } }
+.demo { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.demo h3 { margin: 0 0 6px; font-size: 18px; }
+.demo p { margin: 0; color: var(--muted); font-size: 15px; }
+.stage { height: 230px; margin-bottom: 18px; border-radius: 12px; background: linear-gradient(160deg, #1d3557, #10243b 55%, #0b1a2b); position: relative; overflow: hidden; display: flex; align-items: flex-end; justify-content: flex-end; }
+.flyout { position: absolute; right: 54px; bottom: 58px; display: grid; grid-template-columns: repeat(4, 32px); gap: 10px; padding: 14px; background: #2b2b2b; border: 1px solid #3c3c3c; border-radius: 10px; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+.flyout .gen { width: 32px; height: 32px; border-radius: 6px; background: #3a3a3a; }
+.flyout img { width: 32px; height: 32px; }
+.minibar { width: 100%; height: 44px; background: #202020; border-top: 1px solid #333; display: flex; align-items: center; justify-content: flex-end; gap: 16px; padding: 0 14px; color: #ddd; font-size: 12px; }
+.caret { width: 28px; height: 28px; border-radius: 6px; background: #3a3a3a; display: grid; place-items: center; font-size: 13px; transform: translateY(1px); }
+.mclock { white-space: nowrap; }
+.stage:has(.toast) { align-items: center; justify-content: center; }
+.toast { width: min(360px, calc(100% - 32px)); background: #2b2b2b; border: 1px solid #3c3c3c; border-radius: 10px; box-shadow: 0 16px 40px rgba(0,0,0,.5); padding: 12px 14px 16px; color: #eee; font-size: 14px; animation: toast-in 6s ease-out infinite; }
+.t-head { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #ccc; margin-bottom: 10px; }
+.t-x { margin-left: auto; color: #999; }
+.t-body { display: flex; gap: 12px; align-items: center; }
+.t-body img { flex: none; width: 32px; height: 32px; }
+.t-body strong { display: block; font-size: 15px; margin-bottom: 2px; }
+.t-body span { color: #c8c8c8; }
+html:not(.pt) .t-body strong.en, html.pt .t-body strong.pt { display: block; }
+@keyframes toast-in { 0% { opacity: 0; transform: translateX(40px); } 8%, 85% { opacity: 1; transform: none; } 100% { opacity: 0; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
