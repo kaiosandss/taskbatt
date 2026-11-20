@@ -168,3 +168,23 @@ footer a:hover { color: var(--text); }
 html:not(.pt) .t-body strong.en, html.pt .t-body strong.pt { display: block; }
 @keyframes toast-in { 0% { opacity: 0; transform: translateX(40px); } 8%, 85% { opacity: 1; transform: none; } 100% { opacity: 0; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
+
+/* periféricos em destaque */
+.devices-sec { padding: 70px 0 80px; }
+.devices-sec h2 .hl, .final .rot { color: var(--green); }
+.devices { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+.dev { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 20px 24px; text-align: center; transition: transform .2s, border-color .2s; }
+.dev:hover { transform: translateY(-4px); border-color: rgba(63,208,107,.5); }
+.dev img { width: 80px; height: 80px; margin: 0 auto 16px; }
+.dev h3 { margin: 0 0 14px; font-size: 20px; }
+.meter { height: 8px; border-radius: 99px; background: #2a313c; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--green); border-radius: inherit; }
+.meter.low i { background: var(--yellow); }
+.pct { display: block; margin-top: 8px; font-weight: 600; color: var(--green); }
+.pct.low { color: var(--yellow); }
+.devnote { text-align: center; color: var(--muted); margin: 28px 0 0; }
+@media (max-width: 860px) { .devices { grid-template-columns: repeat(2, 1fr); } }
+
+/* palavra que troca no final */
+.rot { display: inline-block; transition: opacity .3s, transform .3s; }
+.rot.out { opacity: 0; transform: translateY(-8px); }
